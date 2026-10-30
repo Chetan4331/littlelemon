@@ -1,0 +1,16 @@
+{% load static %}
+<header>
+  <a href="{% url 'home' %}" class="logo-container">
+    <img src="{% static 'img/logo.svg' %}" alt="Little Lemon Logo" class="logo-img">
+    <span class="logo-text">LITTLE LEMON</span>
+  </a>
+</header>
+<nav>
+  <ul>
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'menu' %}">Menu</a></li>
+    <li><a href="{% url 'book' %}">Book</a></li>
+    <li><a href="{% url 'reservations' %}">Reservations</a></li>
+  </ul>
+</nav>

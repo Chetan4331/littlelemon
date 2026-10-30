@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+  <article>
+    <h1>Welcome to Little Lemon</h1>
+    <p style="font-size: 18px; margin-bottom: 20px;">
+      Little Lemon is a family-owned Mediterranean restaurant focused on traditional recipes served with a modern twist.
+    </p>
+    <div style="margin-top: 30px;">
+      <a href="{% url 'book' %}" class="btn" style="text-decoration: none; display: inline-block;">Book a Table</a>
+      <a href="{% url 'menu' %}" class="btn" style="text-decoration: none; display: inline-block; margin-left: 15px; background-color: #f4ce14; color: #333333;">View Menu</a>
+    </div>
+  </article>
+</section>
+{% endblock %}

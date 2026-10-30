@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+  <article>
+    <h1>All Reservations</h1>
+    <div class="row">
+      <!-- Left Column: JSON data of all reservations -->
+      <div class="column">
+        <pre id="bookings-json"></pre>
+      </div>
+
+      <!-- Right Column: Map -->
+      <div class="column">
+        <div class="videowrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11898.397022876547!2d-87.6046777!3d41.7905719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e293cd80199d9%3A0xa19bf96f5b9d3e8e!2sHyde%20Park%2C%20Chicago%2C%20IL!5e0!3m2!1sen!2sus!4v1662384760663!5m2!1sen!2sus"
+            width="100%" height="380" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<script>
+  // Format the raw serialized JSON string with 2-space indentation
+  try {
+    const rawData = JSON.parse('{{ bookings|escapejs }}');
+    document.getElementById('bookings-json').innerText = JSON.stringify(rawData, null, 2);
+  } catch (e) {
+    document.getElementById('bookings-json').innerText = '{{ bookings|escapejs }}';
+  }
+</script>
+{% endblock %}

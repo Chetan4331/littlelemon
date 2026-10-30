@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Markazi+Text:wght@500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: #f4f5f7;
+  color: #333333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header & Logo */
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.logo-text {
+  font-family: 'Markazi Text', serif;
+  font-size: 32px;
+  letter-spacing: 3px;
+  color: #495e57;
+  font-weight: 700;
+}
+
+/* Navigation */
+nav {
+  background-color: #495e57;
+  padding: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  display: block;
+  color: #ffffff;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #3b4c46;
+}
+
+/* Main Content */
+main {
+  padding: 40px;
+  min-height: 450px;
+}
+
+h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 30px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+/* Layout Grid */
+.row {
+  display: flex;
+  gap: 40px;
+}
+
+.column {
+  flex: 1;
+}
+
+/* Form Styles */
+form p {
+  margin-bottom: 18px;
+}
+
+form label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #333333;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: inherit;
+  background-color: #ffffff;
+}
+
+form input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+select option:disabled,
+select option.booked {
+  color: #aaaaaa;
+  background-color: #f0f0f0;
+}
+
+button,
+.btn {
+  background-color: #495e57;
+  color: #ffffff;
+  border: none;
+  padding: 10px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #3b4c46;
+}
+
+/* Bookings display */
+#bookings {
+  font-size: 16px;
+  color: #444444;
+}
+
+#bookings p {
+  padding: 8px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* All Reservations Page */
+pre#bookings-json {
+  background: #fdfdfd;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 15px;
+  max-height: 450px;
+  overflow-y: auto;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #24292e;
+}
+
+.videowrap iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  border-radius: 6px;
+}
+
+/* Menu Page */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.menu-item a {
+  color: #495e57;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.menu-item span {
+  font-weight: 700;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+.footer-logo {
+  height: 45px;
+  width: auto;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: #555555;
+  font-weight: 600;
+}

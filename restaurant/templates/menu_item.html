@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+  <article>
+    <h1>{{ menu_item.name }}</h1>
+    <p style="font-size: 20px; font-weight: 700; color: #495e57; margin: 15px 0;">
+      Price: ${{ menu_item.price }}.00
+    </p>
+    <p style="font-size: 16px; line-height: 1.6;">
+      {{ menu_item.menu_item_description }}
+    </p>
+    <div style="margin-top: 25px;">
+      <a href="{% url 'menu' %}" class="btn" style="text-decoration: none; display: inline-block;">Back to Menu</a>
+    </div>
+  </article>
+</section>
+{% endblock %}
